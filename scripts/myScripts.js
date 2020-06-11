@@ -1,4 +1,5 @@
 function myFunction() {
+    console.log(here);
     var x = document.getElementById("nav-list-id");
     if (x.className === "nav-list") {
       x.className += " responsive";

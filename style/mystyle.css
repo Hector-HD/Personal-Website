@@ -45,8 +45,8 @@ header{
 }
 
 @media screen and (max-width: 600px) {
-    .nav-list a:not(:first-child) {display: none;}
-    .nav-list a.icon {
+    
+    .nav-list li a.icon {
       float: right;
       display: block;
     }
@@ -59,7 +59,7 @@ header{
       right: 0;
       top: 0;
     }
-    .nav-list.responsive a {
+    .nav-list.responsive li a {
       float: none;
       display: block;
       text-align: left;
