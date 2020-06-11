@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body{
@@ -11,58 +12,83 @@ header{
     height: 50px;
     font-family: Helvetica;
 }
-.nav-list{
-    list-style-type: none;
-    margin: 0;
-    padding: 5px;
-    overflow: hidden;
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     background-color: #24292E;
+    min-height: 8vh;
 }
 
-.nav-item{
-    float:right;
-}
-
-.nav-item a {
-    display: block;
+.logo{
     color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+    letter-spacing: 5px;
+    font-size: 20px;
 }
 
-.nav-logo{
-    display: block;
+.nav-list{
+    display: flex;
+    justify-content: space-around;
+    width: 35%;
+}
+
+.nav-list li{
+    list-style: none;
+}
+
+.nav-list a{
+    text-decoration: none;
     color: white;
-    text-align: center;
-    padding: 14px 25px;
-    text-decoration: none;
-    float:left;
+    letter-spacing: 3px;
+    font-size: 14px;
 }
 
-.nav-list .icon {
+.burger{
     display: none;
 }
 
-@media screen and (max-width: 600px) {
-    
-    .nav-list li a.icon {
-      float: right;
-      display: block;
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+}
+
+@media screen and (max-width:1100px){
+    .nav-list{
+        width: 50%;
     }
 }
 
-@media screen and (max-width: 600px) {
-    .nav-list.responsive {position: relative;}
-    .nav-list.responsive .icon {
-      position: absolute;
-      right: 0;
-      top: 0;
+@media screen and (max-width:768px){
+    .body{
+        overflow-x: hidden;
     }
-    .nav-list.responsive li a {
-      float: none;
-      display: block;
-      text-align: left;
+    .nav-list{
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 99.9%;
+        transform: translateX(99.9%);
+        transition: transform 0.5s ease-in;
+        background-color: white;
     }
-  }
-  
+
+    .nav-list li{
+        opacity: 0;
+    }
+
+    .burger{
+        display: block;
+        cursor: pointer;
+    }
+}
+
+.nav-active{
+    transform: translateX(0%);
+}

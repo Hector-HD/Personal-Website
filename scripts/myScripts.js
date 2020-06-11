@@ -1,9 +1,11 @@
-function myFunction() {
-    console.log(here);
-    var x = document.getElementById("nav-list-id");
-    if (x.className === "nav-list") {
-      x.className += " responsive";
-    } else {
-      x.className = "nav-list";
-    }
-  }
+const navSlide = () =>{
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav-list');
+
+    burger.addEventListener('click',()=>{
+        nav.classList.toggle('nav-active');
+    });
+}
+
+
+navSlide();
