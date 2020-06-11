@@ -3,7 +3,6 @@
     <head>
         <title>Hector Duenas | Software Engineer</title>
         <link rel="stylesheet" type="text/css" href="style\mystyle.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="scripts\myScripts.js"></script>
     </head>
     <body>
@@ -24,6 +23,15 @@
                 </ul>
             </nav>
         </header>
-
+        <script>
+            function myFunction() {
+    var x = document.getElementById("nav-list-id");
+    if (x.className === "nav-list") {
+      x.className += " responsive";
+    } else {
+      x.className = "nav-list";
+    }
+  }
+        </script>
     </body>
 </html>
