@@ -4,15 +4,12 @@
     box-sizing: border-box;
 }
 
-body{
-    background-color: #181A1B;
-}
 
 header{
-    height: 50px;
     font-family: Helvetica;
 }
 
+/*Navigation*/
 nav{
     display: flex;
     justify-content: space-around;
@@ -22,7 +19,7 @@ nav{
 }
 
 .logo{
-    color: white;
+    color: #f1faee;
     letter-spacing: 5px;
     font-size: 20px;
 }
@@ -30,7 +27,7 @@ nav{
 .nav-list{
     display: flex;
     justify-content: space-around;
-    width: 35%;
+    width: 33%;
 }
 
 .nav-list li{
@@ -39,9 +36,13 @@ nav{
 
 .nav-list a{
     text-decoration: none;
-    color: white;
+    color: #f1faee;
     letter-spacing: 3px;
     font-size: 14px;
+}
+
+.nav-list a:hover{
+    color: gray;
 }
 
 .burger{
@@ -51,23 +52,26 @@ nav{
 .burger div{
     width: 25px;
     height: 3px;
-    background-color: white;
+    background-color: #f1faee;
     margin: 5px;
     transition: all 0.8s ease;
 }
 
+/*Navigation width increases once the width is less than 1100px*/
 @media screen and (max-width:1100px){
     .nav-list{
         width: 50%;
     }
 }
 
+/*Hide the Navigation and display burger menu*/
 @media screen and (max-width:768px){
     body{
         overflow-x: hidden;
     }
 
     .nav-list{
+        z-index: 100;
         position: absolute;
         right: 0px;
         height: 92vh;
@@ -78,11 +82,24 @@ nav{
         width: 100%;
         transform: translateX(100%);
         transition: transform 0.5s ease-in;
-        background-color: black;
+        background-color: #1d3557;
+        float: right;
     }
 
     .nav-list li{
+        padding: 10%;
         opacity: 0;
+        cursor: pointer;
+    }
+
+    .nav-list li:hover{
+        color: white;
+        text-align: center;
+        width: 100%;
+    }
+
+    .nav-list a:focus{
+        color: white;
     }
 
     .burger{
@@ -95,6 +112,7 @@ nav{
     transform: translateX(0%);
 }
 
+/*Used to create the illusion of the navigation words appearing in drop menu*/
 @keyframes navListFade{
     from{
         opacity: 0;
@@ -106,6 +124,7 @@ nav{
     }
 }
 
+/*Creates the illusion of the burger menu turning into an X*/
 .toggle .line1{
     transform: rotate(-45deg) translate(-5px,6px);
 }
@@ -116,4 +135,39 @@ nav{
 
 .toggle .line3{
     transform: rotate(45deg) translate(-5px,-6px);
+}
+
+.content {
+    width: 66%;
+    margin: auto;
+    background: white;
+    padding: 10px;
+    height: 100%;
+    opacity: 20%;
+}
+
+/*Intro*/
+.intro{
+    background-color: #edf2f4;
+    height: 97vh;
+}
+
+.experience{
+    background-color: #474E5D;
+    height: 100vh;
+}
+
+.projects{
+    background-color: #a8dadc;
+    height: 100vh;
+}
+
+.contact{
+    background-color: #1d3557;
+    height: 100vh;
+}
+
+footer{
+    background-color: black;
+    height: 10vh;
 }
