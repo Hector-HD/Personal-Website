@@ -146,16 +146,16 @@ nav{
 
 /*Intro*/
 .intro{
-    background-color: #edf2f4;
+    background-color: #e5e5e5;
     height: 97vh;
 }
 
 #terminal{
     position: relative;
     height: 50vh;
-    width: 70vh;
+    width: 70%;
     background-color: black;
-    margin: 150px auto;
+    margin: 20vh auto;
     border-radius: 14px;
     box-shadow: 1px 2px 26px rgba(0, 0, 0, 0.3);
 }
@@ -164,7 +164,7 @@ nav{
     position: absolute;
     height: 5vh;
     width: 100%;
-    background: lightgray;
+    background: white;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
     left: 0px;
@@ -219,8 +219,8 @@ nav{
     width: 100%;
     background-color: black;
     top: 0;
-    left: 0;
-    animation: typewriter 10s ease-in-out 1 forwards;
+    left: 1vh;
+    animation: typewriter 20s ease-in-out 1 forwards;
 }
 
 #terminal-body p span{
@@ -248,12 +248,12 @@ nav{
 
 /*Eperience and Timeline*/
 #experience{
-    background-color: #474E5D;
-    height: 135vh;
+    background-color: #ffffff;
+    height: 100vh;
 }
 
 #projects{
-    background-color: #a8dadc;
+    background-color: #474E5D;
     height: 100vh;
 }
 
