@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Helvetica;
 }
 
 
@@ -254,14 +255,21 @@ nav{
   
 /*Projects*/
 #projects{
-    background-color: #474E5D;
-    height: 100vh;
+    background-color: white;
+    height: 80vh;
+}
+
+.proj-title{
+  text-align: center;
+  padding-top: 10vh;
+  padding-bottom: 1vh;
+  font-weight: 400;
 }
 
 /* Float four columns side by side */
 .column {
   float: left;
-  width: 25%;
+  width: 33%;
   padding: 0 10px;
 }
 
@@ -277,10 +285,60 @@ nav{
 
 /* Style the counter cards */
 .card {
+  height: 33vh;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
   padding: 16px;
   text-align: center;
   background-color: #f1f1f1;
+}
+
+.card img{
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: middle;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 /* Responsive columns - one column layout (vertical) on small screens */
@@ -290,11 +348,15 @@ nav{
     display: block;
     margin-bottom: 20px;
   }
+
+  #projects{
+    height: 150vh;
+  }
 }
 
 #contact{
     background-color: #1d3557;
-    height: 100vh;
+    height: 60vh;
 }
 
 footer{
