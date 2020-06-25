@@ -212,62 +212,7 @@ nav{
   padding: 50px;
 }
 
-.row{
-  height: 100%;
-}
 
-/* Create two equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 50%;
-  padding: 10px;
-  height: 100%; /* Should be removed. Only for demonstration */
-}
-
-.about-me-img{
-  display: block;
-  float:right;
-  height: 99%;
-}
-
-.image2{
-  display: none;
-}
-
-.column h1{
-  display: block;
-  margin: auto;
-  text-align: center;
-}
-
-.column h4{
-  height: 10%;
-  display: block;
-  margin: auto;
-  text-align: center;
-}
-
-.column p{
-  height: 30%;
-  display: block;
-  margin: auto;
-  text-align: center;
-}
-
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-  }
-}
   
 /*Projects*/
 #projects{
@@ -297,20 +242,12 @@ footer{
 body{
   width: 350px;
 }
-
-  .about-me-img{
-    background-image: url("image\graduation.png");
-  }
 }
 
 
 @media screen and (max-width:768px){
   body{
       overflow-x: hidden;
-  }
-  
-  .about-me-img{
-    background-image: url("image\graduation.png");
   }
 
   .nav-list{
