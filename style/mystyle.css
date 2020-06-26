@@ -112,6 +112,10 @@ nav{
         display: block;
         cursor: pointer;
     }
+
+    #terminal{
+      height: 25vh;
+    }
 }
 
 .nav-active{
@@ -351,6 +355,10 @@ nav{
     width: 100%;
     display: block;
     margin-bottom: 20px;
+  }
+
+  .text{
+      font-size: 14px;
   }
 
   #projects{
